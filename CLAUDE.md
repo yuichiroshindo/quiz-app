@@ -3,6 +3,9 @@
 ## 概要
 一般常識を題材にしたクイズアプリです。
 
+## GitHubリポジトリ
+https://github.com/yuichiroshindo/quiz-app.git
+
 ## 技術スタック
 - HTML
 - CSS
