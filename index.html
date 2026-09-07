@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一般常識クイズと東京の天気</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <header>
+      <h1>一般常識クイズ</h1>
+      <p id="progress">第 1 問 / 5 問</p>
+    </header>
+
+    <main id="quiz-screen">
+      <p id="question-text" class="question-text"></p>
+      <div id="choices" class="choices"></div>
+      <p id="feedback" class="feedback"></p>
+      <button id="next-btn" class="next-btn" hidden>次の問題へ</button>
+    </main>
+
+    <main id="result-screen" class="result-screen" hidden>
+      <h2>結果発表</h2>
+      <p id="score-text" class="score-text"></p>
+      <div class="chart-container">
+        <canvas id="result-chart" aria-label="問題ごとの正解結果" role="img"></canvas>
+      </div>
+      <button id="restart-btn" class="restart-btn">もう一度挑戦する</button>
+    </main>
+  </div>
+
+  <aside class="weather-card" aria-labelledby="weather-title">
+    <div class="weather-heading">
+      <div>
+        <p class="weather-label">TODAY'S WEATHER</p>
+        <h2 id="weather-title">東京の天気</h2>
+      </div>
+      <span id="weather-icon" class="weather-icon" aria-hidden="true"></span>
+    </div>
+    <p id="weather-status" class="weather-status" role="status">天気を取得しています...</p>
+    <div id="weather-details" class="weather-details" hidden>
+      <p id="weather-description" class="weather-description"></p>
+      <p id="weather-temperature" class="weather-temperature"></p>
+      <dl class="weather-meta">
+        <div>
+          <dt>最高</dt>
+          <dd id="weather-max"></dd>
+        </div>
+        <div>
+          <dt>最低</dt>
+          <dd id="weather-min"></dd>
+        </div>
+        <div>
+          <dt>湿度</dt>
+          <dd id="weather-humidity"></dd>
+        </div>
+      </dl>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
